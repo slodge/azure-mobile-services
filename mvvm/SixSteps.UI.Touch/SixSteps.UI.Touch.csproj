@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A53FEAD-499E-4BF2-9E1B-A3E4A426BA3F}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SixSteps.UI.Touch</RootNamespace>
+    <AssemblyName>SixStepsUITouch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <IpaPackageName />
+    <MtouchI18n />
+    <MtouchSdkVersion>5.0</MtouchSdkVersion>
+    <MtouchExtraArgs>-aot "nrgctx-trampolines=4096" -aot "nimt-trampolines=4096" -aot "ntrampolines=4096"</MtouchExtraArgs>
+    <NoStdLib>True</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer: Craig Dunn (6Q937X2U43)</CodesignKey>
+    <IpaPackageName />
+    <MtouchI18n />
+    <MtouchUseLlvm>True</MtouchUseLlvm>
+    <MtouchArch>ARMv6_ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Distribution</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignProvision>8A412ADD-C629-4A7E-8BB7-3E1059951F83</CodesignProvision>
+    <IpaPackageName />
+    <MtouchI18n />
+    <MtouchUseLlvm>True</MtouchUseLlvm>
+    <MtouchArch>ARMv6_ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Distribution</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AdHoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\AdHoc</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Xamarin Inc</CodesignKey>
+    <CodesignProvision>8DA3CC7B-0646-4545-B9E8-CCE97C7D1074</CodesignProvision>
+    <BuildIpa>True</BuildIpa>
+    <IpaPackageName>MWC2012_AdHoc</IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AdHoc|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\AdHoc</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="monotouch" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlatformSpecificServices\SpeakerService.cs" />
+    <Compile Include="TwitterPhoneSearchPresenter.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="TwitterTabletSearchPresenter.cs" />
+    <Compile Include="Views\EmptyViewController.cs" />
+    <Compile Include="Views\SplitView.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\TwitterView.cs" />
+    <Compile Include="Views\HomeView.cs" />
+    <Compile Include="Views\HomeView.designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="Images\Icons\29_icon.png" />
+    <Content Include="Images\Icons\50_icon.png" />
+    <Content Include="Images\Icons\57_icon.png" />
+    <Content Include="Images\Icons\58_icon.png" />
+    <Content Include="Images\Icons\72_icon.png" />
+    <Content Include="Images\Icons\114_icon.png" />
+    <Content Include="Images\Icons\512_icon.png" />
+    <Content Include="Default.png" />
+    <Content Include="Default%402x.png" />
+    <Content Include="Default-Landscape~ipad.png" />
+    <Content Include="Default-Portrait~ipad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\sdk\ios\src\Microsoft.Azure.Zumo.iOS\Microsoft.Azure.Zumo.iOS.csproj">
+      <Project>{8E35FADF-4690-4044-BA12-EB6011BA7486}</Project>
+      <Name>Microsoft.Azure.Zumo.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SixSteps.Core\SixSteps.Core.csproj">
+      <Project>{2C1D266C-59BD-4A95-A52A-426BDD099CF5}</Project>
+      <Name>SixSteps.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
+      <Project>{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}</Project>
+      <Name>Cirrious.MvvmCross</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj">
+      <Project>{64DCD397-9019-41E8-A928-E5F5C5DF185B}</Project>
+      <Name>Cirrious.MvvmCross.Binding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Cirrious.MvvmCross.Binding.Touch\Cirrious.MvvmCross.Binding.Touch.csproj">
+      <Project>{913B13B5-7B2C-4DDA-BECB-DADC827ED895}</Project>
+      <Name>Cirrious.MvvmCross.Binding.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Cirrious.MvvmCross.Dialog.Touch\Cirrious.MvvmCross.Dialog.Touch.csproj">
+      <Project>{F073E4F8-E0B6-43E7-84C1-B71AE4BEA0E0}</Project>
+      <Name>Cirrious.MvvmCross.Dialog.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Plugins\DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache.csproj">
+      <Project>{60A80EB8-2056-4771-8600-03A8DA417CFB}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.DownloadCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Plugins\DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache.Touch\Cirrious.MvvmCross.Plugins.DownloadCache.Touch.csproj">
+      <Project>{59452E25-103C-4677-AB2A-E0D33B9FBDDA}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.DownloadCache.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Plugins\File\Cirrious.MvvmCross.Plugins.File\Cirrious.MvvmCross.Plugins.File.csproj">
+      <Project>{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Plugins\File\Cirrious.MvvmCross.Plugins.File.Touch\Cirrious.MvvmCross.Plugins.File.Touch.csproj">
+      <Project>{5B8CF261-197A-48AF-BC7C-899CF81AA187}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.File.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Plugins\Json\Cirrious.MvvmCross.Plugins.Json\Cirrious.MvvmCross.Plugins.Json.csproj">
+      <Project>{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MVVMCROSS\Cirrious\Cirrious.MvvmCross.Touch\Cirrious.MvvmCross.Touch.csproj">
+      <Project>{E042EDD9-E89D-4928-BF4D-27F0FC29CEDA}</Project>
+      <Name>Cirrious.MvvmCross.Touch</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\HomeView.xib">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

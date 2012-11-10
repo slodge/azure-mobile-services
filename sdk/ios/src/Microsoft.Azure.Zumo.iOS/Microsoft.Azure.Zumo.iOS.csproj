@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,6 +10,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Microsoft.Azure.Zumo.iOS</RootNamespace>
     <AssemblyName>MicrosoftAzureZumoiOS</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -48,15 +50,7 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="ServiceFilter\" />
-    <Folder Include="Windows.Data.Json\" />
-    <Folder Include="Table\" />
-    <Folder Include="Table\Query\" />
-    <Folder Include="Table\Serialization\" />
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="..\..\..\windows\src\Microsoft.Azure.Zumo.Windows.WinMD\ServiceFilter\IServiceFilterResponse.cs">
       <Link>ServiceFilter\IServiceFilterResponse.cs</Link>

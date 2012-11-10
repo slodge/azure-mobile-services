@@ -78,12 +78,12 @@ namespace Microsoft.WindowsAzure.MobileServices
             // whether we should throw a friendlier exception at some point in
             // the future, but this will prevent duplicate names)
             bool hasContract = dataContractAttribute != null;
-            foreach (PropertyInfo property in GetSerializableMembers(hasContract, type.GetProperties))
+            foreach (PropertyInfo property in GetSerializableMembers(hasContract, (a,b) => type.GetProperties(a,b)))
             {
                 SerializableMember member = new SerializableMember(property);
                 this.Members.Add(member.Name, member);
             }
-            foreach (FieldInfo field in GetSerializableMembers(hasContract, type.GetFields))
+            foreach (FieldInfo field in GetSerializableMembers(hasContract, (a,b) => type.GetFields(a,b)))
             {
                 SerializableMember member = new SerializableMember(field);
                 this.Members.Add(member.Name ?? member.MemberName, member);

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:local="http://schemas.android.com/apk/res/SixSteps.UI.Droid"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <Mvx.MvxHttpImageView
+    android:id="@+id/speakerImageView"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:padding="4dp"
+    android:src="@drawable/icon"
+    local:MvxBind="{'HttpImageUrl':{'Path':'PictureUrl','Converter':'SpeakerImage'}}"
+    />
+  <TextView
+    android:id="@+id/title_line"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dip"
+    android:layout_marginTop="6dip"
+    android:layout_toRightOf="@id/speakerImageView"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    local:MvxBind="{'Text':{'Path':'TalkTitle'}}"
+  />
+  <TextView
+    android:id="@+id/talk_title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dip"
+    android:layout_marginTop="6dip"
+    android:layout_below="@id/title_line"
+    android:layout_alignLeft="@id/title_line"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    local:MvxBind="{'Text':{'Path':'Name'}}"
+  />
+</RelativeLayout>
